@@ -2,13 +2,37 @@ version: 2
 
 models:
   - name: dim_users
-    description: "Derived user dimension with engagement bucket based on behavior."
+    columns:
+      - name: user_id
+        tests:
+          - not_null
+          - unique
 
   - name: dim_content
-    description: "Content dimension sourced from staged health content."
+    columns:
+      - name: content_id
+        tests:
+          - not_null
+          - unique
 
   - name: fact_user_daily
-    description: "Daily user engagement metrics (events, sessions, dwell time)."
+    columns:
+      - name: user_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_users')
+              field: user_id
+
+      - name: event_date
+        tests:
+          - not_null
 
   - name: fact_content_engagement_daily
-    description: "Daily content engagement metrics including views and recommendation clicks."
+    columns:
+      - name: content_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_content')
+              field: content_id

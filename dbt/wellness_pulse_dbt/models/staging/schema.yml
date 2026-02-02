@@ -3,9 +3,40 @@ version: 2
 models:
   - name: stg_user_events
     description: "Typed staging model for user behavioral events."
+    columns:
+      - name: event_id
+        tests:
+          - not_null
+          - unique
+
+      - name: user_id
+        tests:
+          - not_null
+
+      - name: event_ts
+        tests:
+          - not_null
 
   - name: stg_health_content
     description: "Typed staging model for health content catalog."
+    columns:
+      - name: content_id
+        tests:
+          - not_null
+          - unique
+
+      - name: category
+        tests:
+          - not_null
 
   - name: stg_marketing_events
     description: "Typed staging model for marketing/CRM events."
+    columns:
+      - name: mkt_event_id
+        tests:
+          - not_null
+          - unique
+
+      - name: user_id
+        tests:
+          - not_null
