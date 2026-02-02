@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: dim_users
+    description: "Derived user dimension with engagement bucket based on behavior."
+
+  - name: dim_content
+    description: "Content dimension sourced from staged health content."
+
+  - name: fact_user_daily
+    description: "Daily user engagement metrics (events, sessions, dwell time)."
+
+  - name: fact_content_engagement_daily
+    description: "Daily content engagement metrics including views and recommendation clicks."

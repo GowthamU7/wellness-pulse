@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_user_events
+    description: "Typed staging model for user behavioral events."
+
+  - name: stg_health_content
+    description: "Typed staging model for health content catalog."
+
+  - name: stg_marketing_events
+    description: "Typed staging model for marketing/CRM events."
