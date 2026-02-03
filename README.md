@@ -42,6 +42,9 @@ dbt Marts (Analytics Layer)
 Validated Analytics Tables
 (used for dashboards / ML / reporting)
 
+<img width="694" height="1506" alt="wellness-pulse" src="https://github.com/user-attachments/assets/aedf2b9a-aa13-4bd9-b002-101171eb1888" />
+
+
 
 Orchestration
 
@@ -126,3 +129,4 @@ dbt run output
 dbt test output
 
 DuckDB tables (analytics.fact_user_daily)
+
