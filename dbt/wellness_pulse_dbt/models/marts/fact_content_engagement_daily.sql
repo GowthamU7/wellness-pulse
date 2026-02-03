@@ -1,5 +1,5 @@
 SELECT
-    DATE(e.event_ts) AS event_date,
+    CAST(e.event_ts AS DATE) AS event_date,
     e.content_id,
     COUNT(*) FILTER (WHERE e.event_type = 'view_content') AS views,
     COUNT(*) FILTER (WHERE e.event_type = 'click_recommendation') AS rec_clicks,

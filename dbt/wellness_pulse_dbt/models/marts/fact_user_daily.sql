@@ -1,5 +1,5 @@
 SELECT
-    DATE(event_ts) AS event_date,
+    CAST(event_ts AS DATE) AS event_date,
     user_id,
     COUNT(*) AS events,
     COUNT(DISTINCT session_id) AS sessions,
